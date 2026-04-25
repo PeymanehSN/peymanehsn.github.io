@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Peymaneh Safaynikoo</title>
+  <meta name="description" content="Founder, behavioral economist, and product thinker working at the intersection of incentives, sustainability, and human decision-making." />
+
+  <style>
+    :root{
+      --bg: #0b1020;
+      --panel: rgba(255,255,255,0.06);
+      --panel-2: rgba(255,255,255,0.09);
+      --text: #f4f7fb;
+      --muted: #b8c0d4;
+      --accent: #7c8cff;
+      --accent-2: #2de2e6;
+      --line: rgba(255,255,255,0.12);
+      --shadow: 0 24px 80px rgba(0,0,0,0.35);
+      --radius: 22px;
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body{
+      margin:0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(124,140,255,0.20), transparent 24%),
+        radial-gradient(circle at top right, rgba(45,226,230,0.16), transparent 22%),
+        linear-gradient(180deg, #0b1020 0%, #0c1329 48%, #070b15 100%);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: var(--accent-2); }
+
+    .container{
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto;
+    }
+
+    .topbar{
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(18px);
+      background: rgba(7,11,21,0.55);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav{
+      display:flex;
+      justify-content: space-between;
+      align-items:center;
+      padding: 16px 0;
+      gap: 20px;
+    }
+
+    .brand{
+      display:flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .brand strong{
+      font-size: 1.02rem;
+      letter-spacing: 0.2px;
+    }
+
+    .brand span{
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .navlinks{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .navlinks a{
+      padding: 8px 10px;
+      border-radius: 999px;
+      transition: 0.2s ease;
+    }
+    .navlinks a:hover{
+      background: rgba(255,255,255,0.07);
+      color: var(--text);
+    }
+
+    .hero{
+      padding: 72px 0 40px;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .hero-card, .side-card, .section-card{
+      background: var(--panel);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      border-radius: var(--radius);
+      backdrop-filter: blur(16px);
+    }
+
+    .hero-card{
+      padding: 34px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card:before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background: linear-gradient(135deg, rgba(124,140,255,0.12), rgba(45,226,230,0.08), transparent 70%);
+      pointer-events:none;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap: 8px;
+      padding: 8px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 0.88rem;
+      background: rgba(255,255,255,0.04);
+      margin-bottom: 20px;
+    }
+
+    h1{
+      margin: 0;
+      font-size: clamp(2.5rem, 5vw, 4.9rem);
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+    }
+
+    .highlight{
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .subhead{
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 1.1rem;
+      max-width: 68ch;
+    }
+
+    .cta-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap: 8px;
+      padding: 12px 18px;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.05);
+      transition: 0.2s ease;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .btn:hover{
+      transform: translateY(-2px);
+      border-color: rgba(255,255,255,0.2);
+      background: rgba(255,255,255,0.08);
+      color: var(--text);
+    }
+
+    .btn.primary{
+      background: linear-gradient(135deg, rgba(124,140,255,0.95), rgba(45,226,230,0.92));
+      color: #06101c;
+      border: none;
+    }
+
+    .side-card{
+      padding: 24px;
+      display:flex;
+      flex-direction:column;
+      gap: 18px;
+    }
+
+    .avatar{
+      width: 92px;
+      height: 92px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, rgba(124,140,255,0.35), rgba(45,226,230,0.20));
+      border: 1px solid var(--line);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+    }
+
+    .fact-grid{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 4px;
+    }
+
+    .fact{
+      padding: 14px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--line);
+    }
+    .fact strong{
+      display:block;
+      font-size: 1rem;
+      margin-bottom: 4px;
+    }
+    .fact span{
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .section{
+      padding: 14px 0 34px;
+    }
+
+    .section-card{
+      padding: 28px;
+      margin-top: 22px;
+    }
+
+    .section h2{
+      font-size: 1.6rem;
+      margin: 0 0 10px;
+      letter-spacing: -0.02em;
+    }
+
+    .section p, .section li{
+      color: var(--muted);
+    }
+
+    .grid-2{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .portfolio{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .project{
+      padding: 20px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--line);
+    }
+
+    .project h3{
+      margin: 0 0 8px;
+      font-size: 1.1rem;
+    }
+
+    .tag{
+      display:inline-block;
+      margin-bottom: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(124,140,255,0.14);
+      color: #dce2ff;
+      font-size: 0.82rem;
+      border: 1px solid rgba(124,140,255,0.18);
+    }
+
+    .pub-list{
+      display:flex;
+      flex-direction:column;
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .pub{
+      padding: 18px 18px 18px 20px;
+      border-left: 3px solid var(--accent-2);
+      background: rgba(255,255,255,0.04);
+      border-radius: 0 16px 16px 0;
+      border: 1px solid var(--line);
+    }
+
+    .pub-title{
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .meta{
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .timeline{
+      display:grid;
+      gap: 14px;
+    }
+
+    .item{
+      padding: 18px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--line);
+    }
+
+    .item-top{
+      display:flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+
+    .item-top strong{
+      font-size: 1.05rem;
+    }
+
+    .item-top span{
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .footer{
+      padding: 34px 0 56px;
+      color: var(--muted);
+      text-align:center;
+      font-size: 0.95rem;
+    }
+
+    .smallcaps{
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    @media (max-width: 900px){
+      .hero-grid, .grid-2, .portfolio{
+        grid-template-columns: 1fr;
+      }
+      .nav{
+        flex-direction: column;
+        align-items:flex-start;
+      }
+    }
+
+    @media (max-width: 560px){
+      .hero-card, .section-card, .side-card{
+        padding: 22px;
+      }
+      h1{
+        font-size: 2.4rem;
+      }
+      .fact-grid{
+        grid-template-columns: 1fr;
+      }
+      .navlinks{
+        gap: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="container nav">
+      <div class="brand">
+        <strong>Peymaneh Safaynikoo</strong>
+        <span>Founder • Behavioral Economist • Product Thinker</span>
+      </div>
+      <nav class="navlinks">
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-card">
+          <div class="eyebrow">Behavioral economics × entrepreneurship × sustainability</div>
+          <h1>
+            I build <span class="highlight">behavior-driven</span> products at the intersection of incentives, sustainability, and human decision-making.
+          </h1>
+          <p class="subhead">
+            Founder and behavioral economist with experience in fintech, fashion, research, and product experimentation.
+            I combine academic depth with startup execution to build products that are commercially viable, analytically rigorous, and human-centered.
+          </p>
+
+          <div class="cta-row">
+            <a class="btn primary" href="mailto:peymaneh.safaee@gmail.com">Contact me</a>
+            <a class="btn" href="https://github.com/PeymanehSN" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn" href="#publications">View publications</a>
+          </div>
+        </div>
+
+        <aside class="side-card">
+          <div class="avatar">PS</div>
+          <div>
+            <div class="smallcaps">Founder profile</div>
+            <h2 style="margin:6px 0 8px;">Bold, research-backed, and product-oriented.</h2>
+            <p style="margin:0; color:var(--muted);">
+              I translate behavioral science into product strategy, experimentation, and systems design.
+            </p>
+          </div>
+
+          <div class="fact-grid">
+            <div class="fact">
+              <strong>PhD</strong>
+              <span>Behavioral Economics</span>
+            </div>
+            <div class="fact">
+              <strong>2 Founders</strong>
+              <span>BAVO, MindMeld Money</span>
+            </div>
+            <div class="fact">
+              <strong>Research</strong>
+              <span>Incentives, peer effects, ESG</span>
+            </div>
+            <div class="fact">
+              <strong>Tools</strong>
+              <span>Python, SQL, R, Tableau</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container section-card">
+        <h2>About</h2>
+        <p>
+          I am a founder and behavioral economist working on products at the intersection of incentives, sustainability, and human decision-making.
+          My background combines academic research, startup building, market analysis, and experimentation.
+        </p>
+        <p>
+          I’m especially interested in early-stage ventures where behavior, product design, and systems thinking matter.
+          I like working on problems that need more than theory: they need validation, iteration, and a deep understanding of how people actually behave.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="portfolio">
+      <div class="container section-card">
+        <h2>Startup Portfolio</h2>
+        <p>
+          Selected founder and applied work that shows how I turn behavioral insight into product and business direction.
+        </p>
+
+        <div class="portfolio" style="margin-top:18px;">
+          <div class="project">
+            <span class="tag">Founder • BAVO</span>
+            <h3>Post-purchase operating system for fashion</h3>
+            <p>
+              Building a product for fashion sustainability, circularity, user insight, and post-purchase experience.
+              Focus areas include zero-to-one execution, founding team development, product direction, user validation, and sustainability scoring.
+            </p>
+          </div>
+
+          <div class="project">
+            <span class="tag">Founder • MindMeld Money</span>
+            <h3>Experimental fintech platform</h3>
+            <p>
+              A fintech concept built around game theory and behavioral economics, using user research, behavioral experiments,
+              and gamified simulations to study and improve financial decision-making.
+            </p>
+          </div>
+
+          <div class="project">
+            <span class="tag">Researcher • EBS Impact Institute</span>
+            <h3>Environmental concerns, ESG, and collective action</h3>
+            <p>
+              Research on environmental concerns, sustainability, collective action, and double materiality in the context of business and impact.
+            </p>
+          </div>
+
+          <div class="project">
+            <span class="tag">Advisor • Chamber of Commerce</span>
+            <h3>Economic strategy under sanctions and uncertainty</h3>
+            <p>
+              Advised on investment strategies and economic challenges in a difficult market environment, with attention to regulation, risk, and constraints.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="research">
+      <div class="container grid-2">
+        <div class="section-card">
+          <h2>Research Focus</h2>
+          <p>
+            My research explores how incentives and behavioral factors shape decisions in organizations, markets, and policy environments.
+          </p>
+          <ul>
+            <li>Behavioral economics</li>
+            <li>Organizational economics</li>
+            <li>Incentive contracts</li>
+            <li>Game theory</li>
+            <li>Social preferences</li>
+            <li>Experimental and behavioral social sciences</li>
+            <li>Environmental economics</li>
+            <li>ESG and sustainability</li>
+            <li>Financial regulation</li>
+            <li>Fiscal federalism</li>
+          </ul>
+        </div>
+
+        <div class="section-card">
+          <h2>Education</h2>
+          <div class="timeline">
+            <div class="item">
+              <div class="item-top">
+                <strong>PhD in Behavioral Economics</strong>
+                <span>Jan 2018 – Nov 2022</span>
+              </div>
+              <div class="meta">EBS University of Business and Law, Germany</div>
+              <div class="meta">Dissertation: The Effects of Social Comparisons on Contractual and Organizational Design</div>
+            </div>
+
+            <div class="item">
+              <div class="item-top">
+                <strong>MSc in Environmental Economics</strong>
+                <span>Sep 2013 – Feb 2016</span>
+              </div>
+              <div class="meta">University of Tehran, Iran</div>
+              <div class="meta">Dissertation: Impact of International Lobby Groups on International Environmental Agreements</div>
+            </div>
+
+            <div class="item">
+              <div class="item-top">
+                <strong>BSc in Economics</strong>
+                <span>Sep 2008 – Jul 2012</span>
+              </div>
+              <div class="meta">Ferdowsi University of Mashhad, Iran</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="publications">
+      <div class="container section-card">
+        <h2>Publications</h2>
+        <p>
+          A Google-Scholar-style snapshot of selected published work and work in progress.
+        </p>
+
+        <div class="pub-list">
+          <div class="pub">
+            <div class="pub-title">
+              Incentives and Peer Effects in the Workplace: On the Impact of Envy and Wage Transparency on Organizational Design
+            </div>
+            <div class="meta">Economic Theory, 2025 • with B. Bental and J. Kragl</div>
+          </div>
+
+          <div class="pub">
+            <div class="pub-title">
+              Impact of International Lobby Groups on International Environmental Agreements
+            </div>
+            <div class="meta">Environmental Economics and Policy Studies, 2021 • with M. H. Dehghani</div>
+          </div>
+
+          <div class="pub">
+            <div class="pub-title">Equal-Wage Policies and Incentive Contracts in Firms</div>
+            <div class="meta">Working paper</div>
+          </div>
+
+          <div class="pub">
+            <div class="pub-title">
+              A Survey of the Role of Social Preferences in Incentives and Organizational Design
+            </div>
+            <div class="meta">Working paper</div>
+          </div>
+
+          <div class="pub">
+            <div class="pub-title">The Role of Political Incentives in Fiscal Federalism</div>
+            <div class="meta">Working paper</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="container section-card">
+        <h2>Skills</h2>
+        <div class="grid-2">
+          <div>
+            <h3>Analytical & Research</h3>
+            <ul>
+              <li>Behavioral economics</li>
+              <li>Experimental design</li>
+              <li>Game theory</li>
+              <li>Organizational design</li>
+              <li>Economic modeling</li>
+              <li>Policy analysis</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Technical Tools</h3>
+            <ul>
+              <li>Python (Pandas, NumPy, SciPy, Matplotlib, scikit-learn)</li>
+              <li>R</li>
+              <li>SQL (SQL Server, MySQL)</li>
+              <li>Tableau</li>
+              <li>Power BI</li>
+              <li>Stata, Eviews, Mathematica, LaTeX, zTree</li>
+              <li>AI-driven video creation</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid-2">
+        <div class="section-card">
+          <h2>Languages</h2>
+          <ul>
+            <li>Persian — Native</li>
+            <li>English — Fluent</li>
+            <li>German — Intermediate</li>
+            <li>Arabic — Elementary</li>
+          </ul>
+        </div>
+
+        <div class="section-card" id="contact">
+          <h2>Contact</h2>
+          <p>Open to collaborations, startup opportunities, research conversations, and product work.</p>
+          <p>
+            <strong>Email:</strong> <a href="mailto:peymaneh.safaee@gmail.com">peymaneh.safaee@gmail.com</a><br />
+            <strong>GitHub:</strong> <a href="https://github.com/PeymanehSN" target="_blank" rel="noopener">github.com/PeymanehSN</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      Built for GitHub Pages • Founder + behavioral economics profile • Peymaneh Safaynikoo
+    </div>
+  </footer>
+
+</body>
+</html>
