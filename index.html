@@ -460,6 +460,37 @@ font-weight: 690;
 font-size: 14px;
 }
 
+.talk-list {
+display: grid;
+gap: 12px;
+margin-top: 8px;
+}
+
+.talk {
+display: flex;
+justify-content: space-between;
+gap: 18px;
+padding: 16px 0;
+border-bottom: 1px solid var(--line);
+}
+
+.talk:last-child {
+border-bottom: 0;
+}
+
+.talk strong {
+color: var(--ink-soft);
+font-size: 16px;
+letter-spacing: -0.02em;
+}
+
+.talk span {
+color: var(--muted);
+font-size: 14px;
+text-align: right;
+flex-shrink: 0;
+}
+
 .contact {
 text-align: center;
 padding: 72px 28px;
@@ -517,6 +548,16 @@ margin-top: 16px;
 grid-template-columns: 1fr;
 }
 
+.talk {
+display: block;
+}
+
+.talk span {
+display: block;
+text-align: left;
+margin-top: 4px;
+}
+
 .nav {
 align-items: flex-start;
 }
@@ -556,8 +597,8 @@ alt="Peymaneh Safaynikoo"
 <a href="#bavo">BAVO</a>
 <a href="#edge">Edge</a>
 <a href="#work">Work</a>
-<a href="#teaching">Teaching</a>
 <a href="#research">Research</a>
+<a href="#teaching">Teaching</a>
 <a href="#contact">Contact</a>
 </div>
 </nav>
@@ -576,12 +617,12 @@ Building products around
 
 <p class="lead">
 I am a behavioral economist and founder working at the intersection of incentives,
-decision design, circular economy, AI-enabled products, and venture building.
+decision design, circular economy, and venture building.
 </p>
 
 <div class="hero-actions">
 <a class="btn btn-primary" href="#bavo">View BAVO</a>
-<a class="btn btn-secondary" href="#edge">View Founder Edge</a>
+<a class="btn btn-secondary" href="#research">View Research</a>
 <a class="btn btn-secondary" href="mailto:peymaneh.safaee@gmail.com">Contact</a>
 </div>
 </div>
@@ -595,7 +636,7 @@ They act when value becomes visible, personal, and easy to use.
 </p>
 
 <p>
-That idea connects my research, founder experience, and current company:
+That idea connects my research, my startup experience, and my current company:
 <strong>BAVO</strong>, the ownership layer for fashion.
 </p>
 
@@ -611,8 +652,8 @@ That idea connects my research, founder experience, and current company:
 </div>
 
 <div class="mini">
-<strong>Founder</strong>
-<span>Venture-building experience</span>
+<strong>MindMeld</strong>
+<span>Behavioral fintech venture</span>
 </div>
 
 <div class="mini">
@@ -646,7 +687,7 @@ beyond research and turning them into products that change real behavior.
 </p>
 
 <p>
-I first developed MindMeld Money, a behavioral fintech venture thesis applying behavioral economics and game theory
+I first built MindMeld Money, an experimental fintech platform applying behavioral economics and game theory
 to investor decision-making. Today, I am building BAVO, a company focused on the missing ownership layer
 in fashion.
 </p>
@@ -675,7 +716,7 @@ The ownership layer for fashion.
 
 <p>
 BAVO turns wardrobes into priced systems of action. Users scan their wardrobe, see item-level value,
-liquidity signals, dormant capital, and next-best actions: sell, restyle, donate, repair, recycle, or keep.
+identify dormant pieces, and receive clear next steps: sell, restyle, donate, repair, recycle, or keep.
 </p>
 
 <p>
@@ -685,8 +726,6 @@ system that makes hidden wardrobe value visible enough to trigger action.
 
 <div class="venture-line">
 <span class="pill">Wardrobe valuation</span>
-<span class="pill">Liquidity signals</span>
-<span class="pill">Dormant capital</span>
 <span class="pill">Decision triggers</span>
 <span class="pill">AI-enabled product flow</span>
 <span class="pill">Circular fashion</span>
@@ -698,7 +737,7 @@ system that makes hidden wardrobe value visible enough to trigger action.
 <section id="edge">
 <div class="section-head">
 <div>
-<div class="label">Founder edge</div>
+<div class="label">My edge</div>
 <h2>Behavioral economics as a founder spike.</h2>
 </div>
 
@@ -733,7 +772,7 @@ I connect individual behavior to marketplace dynamics, ownership data, and scala
 <article class="card">
 <h3>Execution</h3>
 <p>
-I move from insight to validation, product direction, team formation, and go-to-market narrative.
+I move from insight to user validation, product direction, team formation, and go-to-market narrative.
 </p>
 </article>
 </div>
@@ -769,7 +808,7 @@ infrastructure.
 <div>
 <h3>Founder, MindMeld Money</h3>
 <p>
-Developed a behavioral fintech venture thesis applying game theory and behavioral economics to investor
+Built an experimental fintech platform applying game theory and behavioral economics to investor
 decision-making through interactive financial scenarios, user research, and gamified learning mechanics.
 </p>
 </div>
@@ -807,42 +846,6 @@ and market fluctuations.
 </p>
 </div>
 </div>
-</div>
-</section>
-
-<section id="teaching">
-<div class="section-head">
-<div>
-<div class="label">Teaching, mentoring & talks</div>
-<h2>Turning complex ideas into clear stories.</h2>
-</div>
-
-<p class="section-sub">
-I see communication as part of founder execution: making people understand, believe, and act.
-</p>
-</div>
-
-<div class="grid-3">
-<article class="card">
-<h3>University teaching</h3>
-<p>
-Supported teaching, examinations, and student learning in economics and behavioral science during my academic work.
-</p>
-</article>
-
-<article class="card">
-<h3>Mentoring</h3>
-<p>
-Mentored students and helped translate abstract economic concepts into practical, structured thinking.
-</p>
-</article>
-
-<article class="card">
-<h3>Academic presentations</h3>
-<p>
-Presented research in academic settings, developing the ability to communicate rigorous ideas with clarity and confidence.
-</p>
-</article>
 </div>
 </section>
 
@@ -902,6 +905,92 @@ Impact of International Lobby Groups on International Environmental Agreements
 <strong>BSc in Economics</strong>
 <span>Ferdowsi University of Mashhad</span>
 </a>
+</div>
+</div>
+</section>
+
+<section id="teaching">
+<div class="section-head">
+<div>
+<div class="label">Teaching and talks</div>
+<h2>Clear thinking, communicated globally.</h2>
+</div>
+
+<p class="section-sub">
+Teaching and conference presentations strengthened how I explain complex ideas,
+mentor others, and turn research into clear narratives.
+</p>
+</div>
+
+<div class="grid-2">
+<div class="card">
+<h3>Teaching and mentoring</h3>
+
+<a class="paper" href="#">
+<strong>Managerial Economics I: Game Theory</strong>
+<span>Graduate level · EBS University of Business and Law · 2018–2022</span>
+</a>
+
+<a class="paper" href="#">
+<strong>Managerial Economics II: Incentive Theory</strong>
+<span>Graduate level · EBS University of Business and Law · 2018–2022</span>
+</a>
+
+<a class="paper" href="#">
+<strong>Microeconomics</strong>
+<span>Undergraduate level · Ferdowsi University of Mashhad · 2016–2017</span>
+</a>
+
+<a class="paper" href="#">
+<strong>Student mentoring</strong>
+<span>Bachelor’s and Master’s thesis mentoring, research methods, academic writing, grading, and feedback</span>
+</a>
+</div>
+
+<div class="card">
+<h3>Selected conference presentations</h3>
+
+<div class="talk-list">
+<div class="talk">
+<strong>SIOE Annual Conference</strong>
+<span>MIT · 2021</span>
+</div>
+
+<div class="talk">
+<strong>Stony Brook International Conference on Game Theory</strong>
+<span>USA · 2022</span>
+</div>
+
+<div class="talk">
+<strong>SIOE Annual Conference</strong>
+<span>Toronto · 2022</span>
+</div>
+
+<div class="talk">
+<strong>FUR Conference</strong>
+<span>Ghent · 2022</span>
+</div>
+
+<div class="talk">
+<strong>IMEBESS</strong>
+<span>Lisbon · 2023</span>
+</div>
+
+<div class="talk">
+<strong>EARIE Annual Conference</strong>
+<span>Amsterdam · 2024</span>
+</div>
+
+<div class="talk">
+<strong>COPE Colloquium on Personnel Economics</strong>
+<span>Zurich · 2024</span>
+</div>
+
+<div class="talk">
+<strong>SIOE Annual Conference</strong>
+<span>University of Chicago · 2024</span>
+</div>
+</div>
 </div>
 </div>
 </section>
