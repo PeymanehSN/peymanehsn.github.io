@@ -14,21 +14,21 @@ content="Peymaneh Safaynikoo is a behavioral economist and founder building beha
 <style>
 :root {
 --bg: #fbf7f2;
---bg-soft: #f2e7df;
+--bg-soft: #f3e7de;
 --white: #ffffff;
 
---ink: #191411;
+--ink: #17110f;
 --ink-soft: #2a211d;
---muted: #796a61;
+--muted: #76665e;
 
 --accent: #7b4b43;
 --accent-2: #a87569;
 --accent-3: #ead4ca;
 --gold: #b79a72;
 
---deep: #241b18;
+--deep: #231815;
 --line: rgba(123, 75, 67, 0.16);
---shadow: 0 26px 80px rgba(36, 27, 24, 0.12);
+--shadow: 0 28px 90px rgba(36, 27, 24, 0.13);
 
 --radius: 28px;
 --max-width: 1120px;
@@ -48,8 +48,8 @@ body {
 font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 color: var(--ink);
 background:
-radial-gradient(circle at top left, rgba(183, 154, 114, 0.18), transparent 34rem),
-radial-gradient(circle at 84% 6%, rgba(168, 117, 105, 0.16), transparent 32rem),
+radial-gradient(circle at top left, rgba(183, 154, 114, 0.20), transparent 34rem),
+radial-gradient(circle at 86% 5%, rgba(168, 117, 105, 0.18), transparent 32rem),
 linear-gradient(180deg, #fbf7f2 0%, #ffffff 48%, #f3e9e2 100%);
 line-height: 1.6;
 min-height: 100vh;
@@ -76,22 +76,22 @@ position: sticky;
 top: 0;
 z-index: 20;
 backdrop-filter: blur(18px);
-background: rgba(251, 247, 242, 0.72);
+background: rgba(251, 247, 242, 0.74);
 }
 
 .brand {
 display: flex;
 align-items: center;
 gap: 12px;
-font-weight: 800;
-letter-spacing: -0.03em;
+font-weight: 850;
+letter-spacing: -0.035em;
 color: var(--deep);
 }
 
 .brand-mark {
 width: 52px;
 height: 52px;
-border-radius: 16px;
+border-radius: 17px;
 overflow: hidden;
 display: block;
 background: white;
@@ -113,7 +113,11 @@ align-items: center;
 gap: 18px;
 color: var(--muted);
 font-size: 14px;
-font-weight: 650;
+font-weight: 680;
+}
+
+.nav-links a {
+transition: 0.18s ease;
 }
 
 .nav-links a:hover {
@@ -126,7 +130,7 @@ display: grid;
 grid-template-columns: 1.08fr 0.92fr;
 gap: 34px;
 align-items: center;
-padding: 48px 0 72px;
+padding: 48px 0 74px;
 }
 
 .eyebrow {
@@ -138,7 +142,7 @@ border: 1px solid var(--line);
 background: rgba(255, 255, 255, 0.78);
 border-radius: 999px;
 color: var(--accent);
-font-weight: 750;
+font-weight: 780;
 font-size: 13px;
 margin-bottom: 24px;
 box-shadow: 0 10px 26px rgba(36, 27, 24, 0.06);
@@ -149,6 +153,7 @@ width: 8px;
 height: 8px;
 border-radius: 50%;
 background: var(--gold);
+box-shadow: 0 0 0 6px rgba(183, 154, 114, 0.16);
 }
 
 h1 {
@@ -185,10 +190,11 @@ justify-content: center;
 min-height: 46px;
 padding: 12px 18px;
 border-radius: 999px;
-font-weight: 780;
+font-weight: 800;
 font-size: 14px;
 transition: 0.2s ease;
 border: 1px solid transparent;
+cursor: pointer;
 }
 
 .btn-primary {
@@ -216,7 +222,7 @@ border-color: rgba(183, 154, 114, 0.42);
 
 .hero-card {
 background:
-linear-gradient(180deg, rgba(255,255,255,0.96), rgba(251,247,242,0.86));
+linear-gradient(180deg, rgba(255,255,255,0.96), rgba(251,247,242,0.88));
 border: 1px solid var(--line);
 border-radius: 34px;
 padding: 30px;
@@ -234,9 +240,13 @@ margin-bottom: 18px;
 font-size: 29px;
 line-height: 1.14;
 letter-spacing: -0.055em;
-font-weight: 830;
+font-weight: 850;
 color: var(--ink-soft);
 margin-bottom: 22px;
+}
+
+.hero-card p {
+color: var(--muted);
 }
 
 .mini-grid {
@@ -263,7 +273,7 @@ letter-spacing: -0.04em;
 .mini span {
 color: var(--muted);
 font-size: 13px;
-font-weight: 650;
+font-weight: 680;
 }
 
 section {
@@ -284,7 +294,7 @@ color: var(--accent);
 font-size: 13px;
 letter-spacing: 0.13em;
 text-transform: uppercase;
-font-weight: 850;
+font-weight: 880;
 margin-bottom: 10px;
 }
 
@@ -296,7 +306,7 @@ color: var(--ink);
 }
 
 .section-sub {
-max-width: 440px;
+max-width: 450px;
 color: var(--muted);
 font-size: 17px;
 }
@@ -320,7 +330,7 @@ gap: 18px;
 }
 
 .card {
-background: rgba(255, 255, 255, 0.86);
+background: rgba(255, 255, 255, 0.88);
 border: 1px solid var(--line);
 border-radius: var(--radius);
 padding: 24px;
@@ -344,7 +354,7 @@ font-size: 15.5px;
 padding: 34px;
 border-radius: 34px;
 background:
-linear-gradient(135deg, rgba(255,255,255,0.96), rgba(243,233,226,0.9));
+linear-gradient(135deg, rgba(255,255,255,0.97), rgba(243,233,226,0.92));
 border: 1px solid var(--line);
 box-shadow: var(--shadow);
 }
@@ -360,7 +370,7 @@ margin-bottom: 14px;
 .big-card p {
 color: #62544d;
 font-size: 18px;
-max-width: 860px;
+max-width: 870px;
 margin-top: 14px;
 }
 
@@ -372,7 +382,7 @@ color: var(--ink-soft);
 font-size: 22px;
 line-height: 1.3;
 letter-spacing: -0.035em;
-font-weight: 760;
+font-weight: 780;
 }
 
 .venture-line {
@@ -387,7 +397,7 @@ padding: 8px 12px;
 border-radius: 999px;
 background: rgba(234, 212, 202, 0.75);
 color: var(--accent);
-font-weight: 750;
+font-weight: 760;
 font-size: 13px;
 }
 
@@ -403,19 +413,21 @@ gap: 22px;
 align-items: start;
 padding: 22px;
 border-radius: 24px;
-background: rgba(255,255,255,0.76);
+background: rgba(255,255,255,0.78);
 border: 1px solid var(--line);
+box-shadow: 0 10px 30px rgba(36, 27, 24, 0.04);
 }
 
 .when {
 color: var(--accent);
-font-weight: 850;
+font-weight: 880;
 font-size: 14px;
 }
 
 .timeline-item h3 {
 margin-bottom: 6px;
 font-size: 19px;
+letter-spacing: -0.025em;
 }
 
 .timeline-item p {
@@ -449,15 +461,16 @@ font-size: 14px;
 display: flex;
 flex-wrap: wrap;
 gap: 10px;
+margin-top: 14px;
 }
 
 .skill {
 padding: 10px 13px;
-background: rgba(255,255,255,0.82);
+background: rgba(255,255,255,0.84);
 border: 1px solid var(--line);
 border-radius: 999px;
 color: #5e4c44;
-font-weight: 690;
+font-weight: 710;
 font-size: 14px;
 }
 
@@ -465,7 +478,9 @@ font-size: 14px;
 text-align: center;
 padding: 72px 28px;
 border-radius: 40px;
-background: linear-gradient(135deg, #211815, #7b4b43 70%, #a87569);
+background:
+radial-gradient(circle at top left, rgba(183, 154, 114, 0.28), transparent 24rem),
+linear-gradient(135deg, #211815, #7b4b43 70%, #a87569);
 color: white;
 box-shadow: 0 30px 88px rgba(36, 27, 24, 0.26);
 }
@@ -476,9 +491,9 @@ margin-bottom: 18px;
 }
 
 .contact p {
-max-width: 650px;
+max-width: 670px;
 margin: 0 auto 28px;
-color: rgba(255,255,255,0.82);
+color: rgba(255,255,255,0.84);
 font-size: 18px;
 }
 
@@ -535,6 +550,14 @@ display: none;
 .mini-grid {
 grid-template-columns: 1fr;
 }
+
+h1 {
+letter-spacing: -0.065em;
+}
+
+.thesis {
+font-size: 25px;
+}
 }
 </style>
 </head>
@@ -559,6 +582,7 @@ alt="Peymaneh Safaynikoo"
 <a href="#edge">Edge</a>
 <a href="#work">Work</a>
 <a href="#research">Research</a>
+<a href="#visibility">Teaching</a>
 <a href="#contact">Contact</a>
 </div>
 </nav>
@@ -597,8 +621,8 @@ or the next step feels too costly.
 </p>
 
 <p>
-My work turns behavioral economics into product strategy:
-identify the friction, redesign the decision environment,
+My work turns behavioral economics into product strategy.
+I identify the friction, redesign the decision environment,
 and make action easier to take.
 </p>
 
@@ -651,7 +675,7 @@ where I studied political incentives in international environmental agreements.
 
 <p>
 My path has moved from academic research to founder work, but the central question
-has stayed the same: how do we design systems that help people make better decisions
+has stayed the same. How do we design systems that help people make better decisions
 when value is hidden, incentives are misaligned, or action feels costly?
 </p>
 
@@ -671,7 +695,7 @@ but the right decision system does not.
 
 <p class="section-sub">
 I build from the belief that the hardest product problems are often behavioral,
-not technical.
+not only technical.
 </p>
 </div>
 
@@ -679,7 +703,7 @@ not technical.
 <article class="card">
 <h3>Invisible value</h3>
 <p>
-People often own or hold value they cannot see clearly enough to use.
+People often own, hold, or create value they cannot see clearly enough to use.
 </p>
 </article>
 
@@ -706,7 +730,7 @@ The product opportunity is often not another feature, but a better decision envi
 </div>
 
 <div class="quote">
-My founder edge is finding the behavioral wedge:
+My founder edge is finding the behavioral wedge,
 the point where insight, incentive, and product design can unlock action.
 </div>
 </section>
@@ -714,8 +738,8 @@ the point where insight, incentive, and product design can unlock action.
 <section id="ventures">
 <div class="section-head">
 <div>
-<div class="label">Founder Work</div>
-<h2>Two ventures, one thread: better decisions.</h2>
+<div class="label">Founder work</div>
+<h2>Two ventures, one thread. Better decisions.</h2>
 </div>
 
 <p class="section-sub">
@@ -727,20 +751,22 @@ market design, and zero-to-one learning.
 <div class="grid-2">
 <article class="big-card">
 <h3>BAVO</h3>
+
 <p>
 BAVO is my current venture at the intersection of behavioral economics,
 AI-enabled product design, sustainability, and consumer decision-making.
 </p>
 
 <p>
-The venture began from a behavioral insight: ownership is one of the most
-under-designed parts of consumer life. People often own valuable things they rarely use,
-but they lack systems that help them see that value, understand it, and act on it.
+The venture began from a simple behavioral insight. Fashion has mastered buying,
+but it has not built the operating layer for owning. After purchase, wardrobes become
+economically invisible. People do not know what they own, what it is worth,
+what is dormant, or what should be sold, donated, recycled, repaired, or kept.
 </p>
 
 <p>
-My role includes identifying the market thesis, shaping the behavioral wedge,
-assembling the founding team, leading early validation, defining sustainability logic,
+My role includes shaping the market thesis, defining the behavioral wedge,
+assembling the founding team, leading early validation, developing the sustainability logic,
 and building the roadmap from consumer tool to ownership intelligence infrastructure.
 </p>
 
@@ -755,6 +781,7 @@ and building the roadmap from consumer tool to ownership intelligence infrastruc
 
 <article class="big-card">
 <h3>MindMeld Money</h3>
+
 <p>
 Before BAVO, I founded MindMeld Money, an experimental fintech platform applying
 behavioral economics and game theory to investor decision-making.
@@ -763,12 +790,12 @@ behavioral economics and game theory to investor decision-making.
 <p>
 I designed user research, surveys, focus groups, behavioral experiments,
 and early product concepts to test how people respond to risk, incentives,
-and interactive financial learning.
+social comparison, and interactive financial learning.
 </p>
 
 <p>
-MindMeld Money taught me how to move from theory to product:
-from research insight, to hypothesis, to prototype, to user feedback.
+MindMeld Money taught me how to move from theory to product.
+From research insight, to hypothesis, to prototype, to user feedback.
 </p>
 
 <div class="venture-line">
@@ -785,7 +812,7 @@ from research insight, to hypothesis, to prototype, to user feedback.
 <section id="edge">
 <div class="section-head">
 <div>
-<div class="label">What I Bring</div>
+<div class="label">What I bring</div>
 <h2>A cross-disciplinary toolkit for behavior-led products.</h2>
 </div>
 
@@ -893,7 +920,7 @@ and sustainable business solutions with interdisciplinary teams.
 <h3>Research Assistant, EBS University</h3>
 <p>
 Conducted interdisciplinary research bridging organizational economics, behavioral science,
-and financial regulation while mentoring students and supporting teaching and examinations.
+and financial regulation while supporting teaching, examinations, and student mentoring.
 </p>
 </div>
 </div>
@@ -966,16 +993,16 @@ environmental economics, and decision-making.
 <a class="paper" href="#">
 <strong>PhD in Behavioral Economics</strong>
 <span>
-EBS University of Business and Law, Germany · Dissertation:
-The Effects of Social Comparisons on Contractual and Organizational Design
+EBS University of Business and Law, Germany · Dissertation on social comparisons,
+contractual design, and organizational design.
 </span>
 </a>
 
 <a class="paper" href="#">
 <strong>MSc in Environmental Economics</strong>
 <span>
-University of Tehran · Dissertation:
-Impact of International Lobby Groups on International Environmental Agreements
+University of Tehran · Dissertation on international lobby groups
+and environmental agreements.
 </span>
 </a>
 
@@ -995,7 +1022,8 @@ Impact of International Lobby Groups on International Environmental Agreements
 </div>
 
 <p class="section-sub">
-Communication is founder execution: making people understand, believe, and act.
+Communication is founder execution. It is the ability to make people understand,
+believe, and act.
 </p>
 </div>
 
@@ -1012,7 +1040,7 @@ game theory, incentive theory, and microeconomics.
 <h3>Mentoring</h3>
 <p>
 Mentored Bachelor’s and Master’s students on thesis projects,
-research methods, and academic writing.
+research methods, analytical thinking, and academic writing.
 </p>
 </article>
 
@@ -1032,6 +1060,11 @@ IMEBESS, FUR, Stony Brook Game Theory, and Verein für Socialpolitik.
 <div class="label">Skills</div>
 <h2>Behavior, product, and analysis.</h2>
 </div>
+
+<p class="section-sub">
+A practical mix of behavioral science, economic reasoning, product thinking,
+and analytical tools.
+</p>
 </div>
 
 <div class="grid-3">
@@ -1106,8 +1139,8 @@ easier, more valuable, and more natural.
 </p>
 
 <div class="quote">
-I want to build products that do not only explain decisions —
-they help people make better ones.
+I want to build products that do not only explain decisions.
+They help people make better ones.
 </div>
 </div>
 </section>
