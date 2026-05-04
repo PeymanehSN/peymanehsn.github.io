@@ -59,8 +59,6 @@ margin: 0 auto;
 padding: 28px 22px 56px;
 }
 
-/* NAV */
-
 .nav {
 display: flex;
 align-items: center;
@@ -107,12 +105,10 @@ font-weight: 650;
 color: var(--blue);
 }
 
-/* HERO */
-
 .hero {
-min-height: 74vh;
+min-height: 76vh;
 display: grid;
-grid-template-columns: 1.1fr 0.9fr;
+grid-template-columns: 1.08fr 0.92fr;
 gap: 34px;
 align-items: center;
 padding: 48px 0 72px;
@@ -121,7 +117,7 @@ padding: 48px 0 72px;
 .profile-photo {
 width: 168px;
 height: 168px;
-border-radius: 32px;
+border-radius: 34px;
 object-fit: cover;
 border: 1px solid rgba(11, 77, 140, 0.18);
 box-shadow: 0 24px 60px rgba(11, 77, 140, 0.22);
@@ -155,7 +151,7 @@ h1 {
 font-size: clamp(46px, 7vw, 82px);
 line-height: 0.95;
 letter-spacing: -0.075em;
-max-width: 760px;
+max-width: 780px;
 color: #07192b;
 }
 
@@ -164,7 +160,7 @@ color: var(--blue);
 }
 
 .lead {
-max-width: 680px;
+max-width: 700px;
 margin-top: 28px;
 font-size: clamp(18px, 2vw, 23px);
 color: #40546b;
@@ -214,10 +210,10 @@ background: white;
 }
 
 .hero-card {
-background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(255,255,255,0.72));
+background: linear-gradient(180deg, rgba(255,255,255,0.94), rgba(255,255,255,0.74));
 border: 1px solid var(--line);
 border-radius: 34px;
-padding: 28px;
+padding: 30px;
 box-shadow: var(--shadow);
 }
 
@@ -229,10 +225,10 @@ margin-bottom: 18px;
 }
 
 .thesis {
-font-size: 28px;
-line-height: 1.16;
+font-size: 29px;
+line-height: 1.14;
 letter-spacing: -0.055em;
-font-weight: 820;
+font-weight: 830;
 color: #0d2439;
 margin-bottom: 22px;
 }
@@ -263,8 +259,6 @@ color: var(--muted);
 font-size: 13px;
 font-weight: 650;
 }
-
-/* SECTIONS */
 
 section {
 padding: 72px 0;
@@ -343,7 +337,7 @@ font-size: 15.5px;
 .big-card {
 padding: 34px;
 border-radius: 34px;
-background: linear-gradient(135deg, rgba(255,255,255,0.92), rgba(224,241,255,0.84));
+background: linear-gradient(135deg, rgba(255,255,255,0.94), rgba(224,241,255,0.84));
 border: 1px solid var(--line);
 box-shadow: var(--shadow);
 }
@@ -390,8 +384,6 @@ font-weight: 750;
 font-size: 13px;
 }
 
-/* EXPERIENCE */
-
 .timeline {
 display: grid;
 gap: 14px;
@@ -423,8 +415,6 @@ font-size: 19px;
 color: var(--muted);
 }
 
-/* RESEARCH */
-
 .paper {
 display: block;
 padding: 20px 0;
@@ -448,8 +438,6 @@ color: var(--muted);
 font-size: 14px;
 }
 
-/* SKILLS */
-
 .skills {
 display: flex;
 flex-wrap: wrap;
@@ -465,8 +453,6 @@ color: #294967;
 font-weight: 690;
 font-size: 14px;
 }
-
-/* CONTACT */
 
 .contact {
 text-align: center;
@@ -500,8 +486,6 @@ color: var(--muted);
 font-size: 13px;
 text-align: center;
 }
-
-/* RESPONSIVE */
 
 @media (max-width: 900px) {
 .hero {
@@ -566,8 +550,6 @@ grid-template-columns: 1fr;
 </div>
 </nav>
 
-<!-- HERO -->
-
 <header id="top" class="hero">
 <div>
 <img
@@ -599,15 +581,16 @@ decision design, circular economy, and venture building.
 </div>
 
 <aside class="hero-card" aria-label="Founder thesis">
-<h2>Current focus</h2>
+<h2>Founder thesis</h2>
 
 <p class="thesis">
-BAVO is the ownership layer for fashion — turning dormant wardrobe value into action.
+People do not act just because information exists.
+They act when value becomes visible, personal, and easy to use.
 </p>
 
 <p>
-My edge is combining academic depth in behavioral economics with zero-to-one startup execution:
-understanding why people hesitate, what makes value visible, and how a product can turn that moment into action.
+That idea connects my research, my startup experience, and my current company:
+<strong>BAVO</strong>, the ownership layer for fashion.
 </p>
 
 <div class="mini-grid">
@@ -617,24 +600,22 @@ understanding why people hesitate, what makes value visible, and how a product c
 </div>
 
 <div class="mini">
-<strong>2</strong>
-<span>Founder journeys</span>
+<strong>BAVO</strong>
+<span>Ownership layer for fashion</span>
 </div>
 
 <div class="mini">
-<strong>AI × Behavior</strong>
-<span>Current company thesis</span>
+<strong>MindMeld</strong>
+<span>Behavioral fintech venture</span>
 </div>
 
 <div class="mini">
-<strong>Markets</strong>
-<span>Incentives, ESG, circularity</span>
+<strong>Edge</strong>
+<span>Behavior → product → action</span>
 </div>
 </div>
 </aside>
 </header>
-
-<!-- ABOUT -->
 
 <section id="about">
 <div class="section-head">
@@ -644,37 +625,37 @@ understanding why people hesitate, what makes value visible, and how a product c
 </div>
 
 <p class="section-sub">
-Many products fail not because the technology is impossible, but because the decision moment is misunderstood.
+My work focuses on products where the hard question is not only what can be built,
+but what makes people trust, use, and act.
 </p>
 </div>
 
 <div class="big-card">
-<h3>From research to venture building</h3>
+<h3>From behavioral research to venture building</h3>
 
 <p>
 My academic work studied how incentives, social comparison, and institutional design shape decisions
-inside organizations and markets. Over time, I became increasingly interested in taking those insights beyond
-research and turning them into products that help people make better decisions in real life.
+inside organizations and markets. Over time, I became increasingly interested in taking those insights
+beyond research and turning them into products that change real behavior.
 </p>
 
 <p>
-That path led me into entrepreneurship: first through MindMeld Money, an experimental fintech platform applying
-behavioral economics and game theory to investor decision-making, and now through BAVO, a venture focused on
-the missing ownership layer in fashion.
+I first built MindMeld Money, an experimental fintech platform applying behavioral economics and game theory
+to investor decision-making. Today, I am building BAVO, a company focused on the missing ownership layer
+in fashion.
 </p>
 
 <div class="quote">
-People do not act just because information exists. They act when value becomes visible, personal, and easy to use.
+My founder edge is understanding the decision moment:
+what people delay, what they overvalue, what they ignore, and what finally makes them act.
 </div>
 </div>
 </section>
 
-<!-- BAVO -->
-
 <section id="bavo">
 <div class="section-head">
 <div>
-<div class="label">Current Venture</div>
+<div class="label">Current venture</div>
 <h2>BAVO</h2>
 </div>
 
@@ -688,70 +669,67 @@ The ownership layer for fashion.
 
 <p>
 BAVO turns wardrobes into priced systems of action. Users scan their wardrobe, see item-level value,
-detect dormant pieces, and receive clear next steps: sell, restyle, donate, repair, recycle, or keep.
+identify dormant pieces, and receive clear next steps: sell, restyle, donate, repair, recycle, or keep.
 </p>
 
 <p>
-Most people do not know what their wardrobe is worth or what to do with unused items.
-BAVO makes that invisible value visible and actionable.
+The insight is simple: most people do not need another closet organizer. They need a valuation and action
+system that makes hidden wardrobe value visible enough to trigger action.
 </p>
 
 <div class="venture-line">
 <span class="pill">Wardrobe valuation</span>
-<span class="pill">Behavioral product design</span>
+<span class="pill">Decision triggers</span>
+<span class="pill">AI-enabled product flow</span>
 <span class="pill">Circular fashion</span>
 <span class="pill">Ownership intelligence</span>
-<span class="pill">Post-purchase infrastructure</span>
 </div>
 </div>
 </section>
 
-<!-- EDGE -->
-
 <section id="edge">
 <div class="section-head">
 <div>
-<div class="label">My Edge</div>
-<h2>Designing around the moment people act.</h2>
+<div class="label">My edge</div>
+<h2>Behavioral economics as a founder spike.</h2>
 </div>
 
 <p class="section-sub">
-My spike is behavioral economics applied to venture-scale product design.
+I use behavioral economics not as language around the product,
+but as the mechanism inside the product.
 </p>
 </div>
 
 <div class="grid-4">
 <article class="card">
-<h3>Behavioral economics</h3>
+<h3>Behavior</h3>
 <p>
-I understand how people respond to incentives, comparison, loss, uncertainty, and decision friction.
+I understand why people delay, avoid, compare, overvalue, underestimate, and hesitate.
 </p>
 </article>
 
 <article class="card">
-<h3>Incentive design</h3>
+<h3>Incentives</h3>
 <p>
-I design product moments where value becomes clear enough to change behavior.
+I design product moments where motivation is clear and action feels worth it.
 </p>
 </article>
 
 <article class="card">
-<h3>Market design</h3>
+<h3>Markets</h3>
 <p>
-I connect individual decisions to scalable systems, network effects, and commercial loops.
+I connect individual behavior to marketplace dynamics, ownership data, and scalable business models.
 </p>
 </article>
 
 <article class="card">
-<h3>Startup execution</h3>
+<h3>Execution</h3>
 <p>
-I move from thesis to validation, team formation, product direction, and go-to-market narrative.
+I move from insight to user validation, product direction, team formation, and go-to-market narrative.
 </p>
 </article>
 </div>
 </section>
-
-<!-- EXPERIENCE -->
 
 <section id="work">
 <div class="section-head">
@@ -761,7 +739,7 @@ I move from thesis to validation, team formation, product direction, and go-to-m
 </div>
 
 <p class="section-sub">
-A compact view of the path from academic research to product and company building.
+A path from academic depth to company building.
 </p>
 </div>
 
@@ -771,8 +749,9 @@ A compact view of the path from academic research to product and company buildin
 <div>
 <h3>Founder, BAVO</h3>
 <p>
-Building the post-purchase operating system for fashion, defining a valuation-led behavioral wedge
-and developing BAVO from consumer product into ownership intelligence infrastructure.
+Building the post-purchase operating system for fashion, defining a valuation-led behavioral wedge,
+shaping product direction, and developing BAVO from consumer product into ownership intelligence
+infrastructure.
 </p>
 </div>
 </div>
@@ -783,7 +762,7 @@ and developing BAVO from consumer product into ownership intelligence infrastruc
 <h3>Founder, MindMeld Money</h3>
 <p>
 Built an experimental fintech platform applying game theory and behavioral economics to investor
-decision-making through interactive financial scenarios and gamified learning mechanics.
+decision-making through interactive financial scenarios, user research, and gamified learning mechanics.
 </p>
 </div>
 </div>
@@ -793,8 +772,8 @@ decision-making through interactive financial scenarios and gamified learning me
 <div>
 <h3>Researcher, EBS Impact Institute</h3>
 <p>
-Worked on environmental concerns, collective action, ESG, double materiality, and sustainable
-business solutions with interdisciplinary teams.
+Worked on environmental concerns, collective action, ESG, double materiality,
+and sustainable business solutions with interdisciplinary teams.
 </p>
 </div>
 </div>
@@ -815,14 +794,13 @@ while mentoring students and supporting teaching and examinations.
 <div>
 <h3>Economic Advisor, Chamber of Commerce</h3>
 <p>
-Advised on investment strategy under sanctions, uncertainty, regulatory constraints, and market fluctuations.
+Advised on investment strategy under sanctions, uncertainty, regulatory constraints,
+and market fluctuations.
 </p>
 </div>
 </div>
 </div>
 </section>
-
-<!-- RESEARCH -->
 
 <section id="research">
 <div class="section-head">
@@ -863,14 +841,16 @@ and decision-making.
 <a class="paper" href="#">
 <strong>PhD in Behavioral Economics</strong>
 <span>
-EBS University of Business and Law, Germany · Dissertation: The Effects of Social Comparisons on Contractual and Organizational Design
+EBS University of Business and Law, Germany · Dissertation:
+The Effects of Social Comparisons on Contractual and Organizational Design
 </span>
 </a>
 
 <a class="paper" href="#">
 <strong>MSc in Environmental Economics</strong>
 <span>
-University of Tehran · Dissertation: Impact of International Lobby Groups on International Environmental Agreements
+University of Tehran · Dissertation:
+Impact of International Lobby Groups on International Environmental Agreements
 </span>
 </a>
 
@@ -881,8 +861,6 @@ University of Tehran · Dissertation: Impact of International Lobby Groups on In
 </div>
 </div>
 </section>
-
-<!-- SKILLS -->
 
 <section id="skills">
 <div class="section-head">
@@ -936,8 +914,6 @@ University of Tehran · Dissertation: Impact of International Lobby Groups on In
 </div>
 </div>
 </section>
-
-<!-- CONTACT -->
 
 <section id="contact">
 <div class="contact">
